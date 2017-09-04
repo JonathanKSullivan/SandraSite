@@ -1,0 +1,6 @@
+qualitaxas/__init__.py
+qualitaxas.egg-info/PKG-INFO
+qualitaxas.egg-info/SOURCES.txt
+qualitaxas.egg-info/dependency_links.txt
+qualitaxas.egg-info/requires.txt
+qualitaxas.egg-info/top_level.txt

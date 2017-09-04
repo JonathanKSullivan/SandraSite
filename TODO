@@ -1,0 +1,4 @@
+TODO:
+* Use pytest-flask Write Test
+* Use flask-sqlalchemy to create data model
+* Use flask-restful to create endpoint

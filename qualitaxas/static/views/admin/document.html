@@ -1,0 +1,61 @@
+<div class="col-xs-12">
+<h1>[{name}]</h1>
+<hr/>
+<h2>Add a [{name}]</h2>
+
+<div class="row">
+    <a href="#!/admin/document/documentType">
+        <div class="col-xs-12">
+            Manage Documents Types
+        </div>
+    </a>
+</div>
+
+<form name="documentForm" ng-submit="submit();">
+    <fieldset class="row">
+        <div class="col-xs-6">
+            <label>Name</label>
+            <input type="text" ng-model="newDocument.name">
+        </div>
+        <div class="col-xs-6">
+            <label>Short Description</label>
+            <input type="text" ng-model="newDocument.description">
+        </div>
+        <div class="col-xs-6">
+            <label>Company</label>
+            <select ng-model="newDocument.companyId">
+              <option ng-selected="{{company.id == newDocument.companyId}}" ng-repeat="company in companies" value="[{company.id}]">[{company.name}]</option>
+            </select>
+        </div>
+        <div class="col-xs-6">
+            <label>Document Type</label>
+            <select ng-model="newDocument.documentType">
+              <option ng-selected="{{documentType.id == newDocument.documentTypeId}}" ng-repeat="documentType in documentTypes" value="[{documentType.id}]">[{documentType.typeName}]</option>
+            </select>
+        </div>
+        <div class="col-xs-6">
+            <label>Document </label>
+            <input type="file" ng-model="newDocument.file">
+        </div>
+    </fieldset>
+    <input  type="submit" id="submit" value="Submit" >
+</form>
+
+<div class="row">
+  <div class="col-xs-12"> 
+    <table>
+      <thead>
+        <tr>
+          <th>Id</th>
+          <th>Type Name</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr ng-repeat="document in documents">
+          <td>[{documentType.id}]</td>
+          <td>[{documentType.typeName}]</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>

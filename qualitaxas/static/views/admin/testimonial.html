@@ -1,0 +1,25 @@
+<div class="col-xs-12">
+<h1>[{name}]</h1>
+<p class="zip-error"></p>
+<h2>Testimonials</h2>
+<table class="col-xs-12" >
+  <thead>
+    <tr>
+
+        <th>Id</th>
+        <th>user_id</th>
+        <th>headline</th>
+        <th>content</th>
+        <th>date</th>
+    </tr>
+  </thead>
+  <tbody ng-repeat="testimonial in testimonials">
+    <tr ng-show = "!(isShowForm(testimonial.id))">
+      
+    </tr>
+    <tr ng-show = "isShowForm(testimonial.id)">
+      
+    </tr>
+  </tbody>
+</table>
+</div>

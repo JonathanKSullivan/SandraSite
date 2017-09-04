@@ -1,0 +1,70 @@
+<div class="row" ng-show="view == 0">
+  <div class="col-xs-6"> 
+    <div id="map" style="width:300px; height:300px;"></div>
+  </div>
+  <div class="col-xs-6"> 
+    <form ng-submit="submitCorrespondence()">
+      <table>
+        <tr>
+          <td>
+            Name:
+          </td>
+          <td>
+            <input ng-model="name" type="text"> 
+          </td>
+        </tr>
+        <tr>
+          <td>
+            Email:
+          </td>
+          <td>
+            <input ng-model="email" type="email"> 
+          </td>
+        </tr>
+        <tr>
+          <td>
+            Phone:
+          </td>
+          <td>
+            <input ng-model="phone" type="tel"> 
+          </td>
+        </tr>
+        <tr>
+          <td>
+            Subject:
+          </td>
+          <td>
+            <input ng-model="subject" type="text"> 
+          </td>
+        </tr>
+        <tr>
+          <td>
+            Message:
+          </td>
+          <td>
+            <textarea ng-model="message" rows="4" cols="50"></textarea>
+          </td>
+        </tr>
+      </table>
+      <input type="submit"> 
+    </form>
+  </div>
+</div>
+
+<script>
+  function initMap() {
+    var qualitaxas = {lat: 32.747341, lng: -97.072570};
+    var map = new google.maps.Map(document.getElementById('map'), {
+      zoom: 4,
+      center: qualitaxas
+    });
+    var marker = new google.maps.Marker({
+      position: qualitaxas,
+      map: map
+    });
+  }
+</script>
+
+<script async defer
+src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC5uOlT1711wvKqCJy0eF3m7ydvzodB3pw&callback=initMap">
+</script>

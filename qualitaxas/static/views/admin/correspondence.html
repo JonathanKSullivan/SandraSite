@@ -1,0 +1,27 @@
+<div class="row">
+  <div class="col-xs-12"> 
+    <table ng-repeat="correspondence in correspondences">
+      <thead>
+        <tr>
+          <th>Id</th>
+          <th>Date</th>
+          <th>Name</th>
+          <th>Email</th>
+          <th>Phone</th>
+          <th>Subject</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>[{correspondence.id}]</td>
+          <td>[{correspondence.date}]</td>
+          <td>[{correspondence.name}]</td>
+          <td>[{correspondence.email}]</td>
+          <td>[{correspondence.phone}]</td>
+          <td>[{correspondence.subject}]</td>
+          <td><a href="#!/admin/correspondence/[{correspondence.email}]"><button type="button" ng-click="">View</button></a></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>

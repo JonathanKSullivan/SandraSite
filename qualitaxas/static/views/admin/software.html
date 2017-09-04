@@ -1,0 +1,45 @@
+<h2>Software</h2>
+    <div class="col-xs-12">
+        Create a Software Type
+    </div>
+    <div class="col-xs-12">
+        View a Software Type
+    </div>
+    <div class="col-xs-12">
+        Update a Software Type
+    </div>
+    <div class="col-xs-12">
+        Mute a Software Type
+    </div>
+<div class="col-xs-12">
+<h1>[{name}]</h1>
+<hr/>
+<h2>Add a [{name}]</h2>
+<form name="documentTypeForm" ng-submit="submit();">
+    <fieldset class="row">
+        <div class="col-xs-6">
+            <label>Document Type Name</label>
+            <input type="text" ng-model="documentType.typeName">
+        </div>
+    </fieldset>
+    <input  type="submit" id="submit" value="Submit" >
+</form>
+
+<div class="row">
+  <div class="col-xs-12"> 
+    <table ng-repeat="documentType in documentTypes">
+      <thead>
+        <tr>
+          <th>Id</th>
+          <th>Type Name</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>[{documentType.id}]</td>
+          <td>[{documentType.typeName}]</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>

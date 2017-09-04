@@ -1,0 +1,82 @@
+<div class="col-xs-12">
+<h1>[{name}]</h1>
+<hr/>
+<h2>Add a [{name}]</h2>
+<form ng-submit="submit();">
+    <fieldset class="row">
+        <div class="col-xs-6">
+            <label>Name</label>
+            <input type="text" ng-model="newCompany.name">
+        </div>
+        <div class="col-xs-6">
+            <label>Logo Url</label>
+            <input type="url" ng-model="newCompany.img_url">
+        </div>
+    </fieldset>
+    <fieldset class="row">
+        <div class="col-xs-6">
+            <label>Website</label>
+            <input type="url" ng-model="newCompany.website">
+        </div>
+        <div class="col-xs-6">
+            <label>Email</label>
+            <input type="email" ng-model="newCompany.email">
+        </div>
+        <div class="col-xs-6">
+            <label>Phone</label>
+            <input type="tel" ng-model="newCompany.phone">
+        </div>
+    </fieldset>
+    <fieldsetclass="row">
+        <div>
+            <label>Zip Code</label>
+            <input type="text" id="zip" ng-model="newCompany.zip_code" ng-keyup="autoFillZipNew()" maxlength="10">
+            <span ng-if="error">Zip Code [{error}]</span>
+        </div>
+        <div class="col-xs-12" ng-show="showCity">
+            <label>City</label>
+            <span id="city_shown"></span>
+            <input ng-value="newCompany.city" id="city" ng-disabled="true">
+            <label>State</label>
+            <span  id="state_shown"></span>
+            <input ng-value="newCompany.state" id="state" ng-disabled="true">
+        </div>
+        <div class="col-xs-12">
+            <label>Address 1</label>
+            <input type="text" id="address-line-1" ng-model="newCompany.address1">
+        </div>
+        <div class="col-xs-12">
+            <label>Address 2</label>
+            <input type="text" id="address-line-2" ng-model="newCompany.address2">
+        </div>
+    </fieldset>
+    <input  type="submit" id="submit" value="Submit" >
+</form>
+<p class="zip-error"></p>
+<h2>Companies</h2>
+<table class="col-xs-12" >
+  <thead>
+    <tr>
+        <th>Id</th>
+        <th>Name</th>
+        <th>Email</th>
+        <th>Password_hash</th>
+        <th>Picture</th>
+        <th>Role</th>
+        <th>Phone</th>
+        <th>Active</th>
+        <th >Company_admin</th>
+        <th>Creation_date</th>
+        <th>Company</th>
+    </tr>
+  </thead>
+  <tbody ng-repeat="user in users">
+    <tr ng-show = "!(isShowForm(user.id))">
+      
+    </tr>
+    <tr ng-show = "isShowForm(user.id)">
+      
+    </tr>
+  </tbody>
+</table>
+</div>

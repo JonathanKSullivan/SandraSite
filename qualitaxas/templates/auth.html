@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html ng-app="qualitaxas">
+  <head lang="en">
+    <meta charset="utf-8">
+    <title>Qualitaxas</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width">
+    <meta name="udacity-grader" content="extras/grader.json" unit-tests="extras/grader.js">
+    <link rel="stylesheet" href="{{url_for('static', filename = 'styles/all.css')}}">
+
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js"
+            integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+            crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" />
+
+    {{ JSGlue.include() }}
+  </head>
+  <body>
+    <div class="header">
+      <div class="navbar navbar-default" role="navigation">
+        <div class="container-fluid">
+          <div class="navbar-header">
+
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#js-navbar-collapse">
+              <span class="sr-only">Toggle navigation</span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+
+            <a class="navbar-brand" href="#/">Qualitaxas</a>
+          </div>
+
+          <div class="collapse navbar-collapse" id="js-navbar-collapse">
+
+            <ul class="nav navbar-nav">
+              <li>
+                <a id="meet" href="#!/meet">
+                  Meet Sandra
+                </a>
+              </li>
+              <li>
+                <a id="services" href="#!/services">
+                  Services
+                </a>
+              </li>
+              <li>
+                <a id="testimonials" href="#!/testimonials">
+                  Testimonials
+                </a>
+              </li>
+              <li>
+                <a id="contact" href="#!/contact">
+                  Contact
+                </a>
+              </li>
+            </ul>
+            <ul class="nav navbar-nav navbar-right">
+              {% if not session.login %}
+              <li>
+                <a id="login" href="#!/login">
+                  Login
+                </a>
+              </li>
+              {% endif %}
+              {% if session.login %}
+              <li>
+                <a id="logout" href="#!/logout">
+                  Login
+                </a>
+              </li>
+              {% endif %}
+              {% if session.company_admin %}
+              <li>
+                <a id="admin" href="#!/admin">
+                  Admin
+                </a>
+              </li>
+              {% endif %}
+              {% if session.admin %}
+              <li>
+                <a id="admin" href="#!/admin">
+                  Admin
+                </a>
+              </li>
+              {% endif %}
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="container">
+      <div ui-view class="row"></div>
+    </div>
+
+    <div class="footer">
+      <div class="container">
+        <p>
+          Built by by Jonathan K Sullivan
+        </p>
+      </div>
+    </div>
+
+    <!-- build:js(.) scripts/vendor.js -->
+    <!-- bower:js -->
+    
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.7/angular-resource.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/1.0.3/angular-ui-router.js"></srcipt>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="{{url_for('static', filename = 'scripts/directives/ngFileUpload/ng-file-upload-shim.min.js')}}"></script>
+    <script src="{{url_for('static', filename = 'scripts/directives/ngFileUpload/ng-file-upload.min.js')}}"></script>
+    <!-- endbower -->
+    <!-- endbuild -->
+
+    <!-- build:js({.tmp,app}) scripts/scripts.js -->
+    <script src="{{url_for('static', filename = 'scripts/app.js')}}"></script>
+    <script src="{{url_for('static', filename = 'scripts/routes.js')}}"></script>
+    <script src="{{url_for('static', filename = 'scripts/controllers/auth.js')}}"></script>
+    <script src="{{url_for('static', filename = 'scripts/controllers/contact.js')}}"></script>
+    <script src="{{url_for('static', filename = 'scripts/controllers/company.js')}}"></script>
+    <script src="{{url_for('static', filename = 'scripts/controllers/correspondence.js')}}"></script>
+    <script src="{{url_for('static', filename = 'scripts/controllers/user.js')}}"></script>
+    <script src="{{url_for('static', filename = 'scripts/controllers/documentType.js')}}"></script>
+    <script src="{{url_for('static', filename = 'scripts/controllers/document.js')}}"></script>
+    <script src="{{url_for('static', filename = 'scripts/controllers/testimonial.js')}}"></script>
+    <script src="{{url_for('static', filename = 'scripts/services/purchase-manager.js')}}"></script>
+    
+    <!-- endbuild -->
+
+  </body>
+</html>

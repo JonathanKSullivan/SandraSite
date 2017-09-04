@@ -1,0 +1,49 @@
+<div class="row">
+  <form ng-submit="submit()">
+      <table>
+        <tr>
+          <td>
+            Name:
+          </td>
+          <td>
+            <input ng-model="name" type="text"> 
+          </td>
+        </tr>
+        <tr>
+          <td>
+            Phone:
+          </td>
+          <td>
+            <input ng-model="phone" type="tel"> 
+          </td>
+        </tr>
+        <tr>
+          <td>
+            Subject:
+          </td>
+          <td>
+            <input ng-model="subject" type="text" value="RE:"> 
+          </td>
+        </tr>
+        <tr>
+          <td>
+            Message:
+          </td>
+          <td>
+            <textarea ng-model="message" rows="4" cols="50"></textarea>
+          </td>
+        </tr>
+      </table>
+      <input type="submit"> 
+    </form>
+  <div class="col-xs-12" ng-repeat="correspondence in correspondences"> 
+      <hr/>
+      <div>Type: [{correspondence.inboxSent}]</div>
+      <div>Date: [{correspondence.date}]</div>
+      <div>Name: [{correspondence.name}]</div>
+      <div>Phone: [{correspondence.phone}]</div>
+      <div>Email: [{correspondence.email}]</div>
+      <div>Subject: [{correspondence.subject}]</div>
+      <div>Message: [{correspondence.message}]</div>
+  </div>
+</div>

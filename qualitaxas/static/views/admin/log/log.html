@@ -1,0 +1,128 @@
+<form>
+  <div class="col-xs-12">
+    <img src="[{company.img_url}]" style="width:100px;"><br/>
+    <span ng-show="isShowForm()">Image Url: <input type="text" ng-model="company.img_url"></span>
+
+    <table>
+      <thead >
+        <tr>
+          <th>Label</th>
+          <th>Value</th>
+        </tr>
+      </thead>
+      <tbody ng-show = "!isShowForm()">
+        <tr>
+          <td>Id</td>
+          <td><span>[{company.id}]</span></td>
+        </tr>
+        <tr>
+          <td>Name</td>
+          <td><span>[{company.name}]</span></td>
+        </tr>
+        <tr>
+          <td>Phone</td>
+          <td><span>[{company.phone}]</span></td>
+        </tr>
+        <tr>
+          <td>Email</td>
+          <td><span>[{company.email}]</span></td>
+        </tr>
+        <tr>
+          <td>Website</td>
+          <td><span>[{company.website}]</span></td>
+        </tr>
+        <tr>
+          <td>Address 1</td>
+          <td><span>[{company.address.split('|')[0]}]</span></td>
+        </tr>
+        <tr>
+          <td>Address 2</td>
+          <td><span>[{company.address.split('|')[1]}]</span></td>
+        </tr>
+        <tr>
+          <td>City</td>
+          <td><span>[{company.city}]</span></td>
+        </tr>
+        <tr>
+          <td>State</td>
+          <td><span>[{company.state}]</span></td>
+        </tr>
+        <tr>
+          <td>Zip Code</td>
+          <td><span>[{company.zip_code}]</span></td>
+        </tr>
+        <tr>
+          <td>Date Created</td>
+          <td><span>[{company.creation_date}]</span></td>
+        </tr>
+        <tr>
+          <td>Status</td>
+          <td><span ng-if="company.active">active</span>
+              <span ng-if="!company.active">inactive</span></td>
+        </tr>
+        <tr>
+          <td><button ng-click="showUpdateForm()">update</button></td>
+          <td><button ng-click="activateCompany()" ng-if="!company.active">activate</button>
+              <button ng-click="activateCompany()" ng-if="company.active">inactivate</button></td>
+        </tr>
+      </tbody>
+      <tbody ng-show = "isShowForm()">
+        <tr>
+          <td>Id</td>
+          <td><span>[{company.id}]</span></td>
+        </tr>
+        <tr>
+          <td>Name</td>
+          <td><input type="text" ng-model="updateCompanyData.name"></td>
+        </tr>
+        <tr>
+          <td>Phone</td>
+          <td><input type="text" ng-model="updateCompanyData.phone"></td>
+        </tr>
+        <tr>
+          <td>Email</td>
+          <td><input type="text" ng-model="updateCompanyData.email"></td>
+          
+        </tr>
+        <tr>
+          <td>Website</td>
+          <td><input type="text" ng-model="updateCompanyData.website"></td>
+        </tr>
+        <tr>
+          <td>Address 1</td>
+          <td><input type="text" ng-model="updateCompanyData.address1"></td>
+        </tr>
+        <tr>
+          <td>Address 2</td>
+          <td><input type="text" ng-model="updateCompanyData.address2"></td>
+        </tr>
+        <tr>
+          <td>City</td>
+          <td><input type="text" ng-model="updateCompanyData.city"></td>
+        </tr>
+        <tr>
+          <td>State</td>
+          <td><input type="text" ng-model="updateCompanyData.state"></td>
+        </tr>
+        <tr>
+          <td>Zip Code</td>
+          <td><input type="text" ng-model="updateCompanyData.zip_code"></td>
+        </tr>
+        <tr>
+          <td>Date Created</td>
+          <td><span>[{company.creation_date}]</span></td>
+        </tr>
+        <tr>
+          <td>Status</td>
+          <td><span ng-if="company.active">active</span>
+              <span ng-if="!company.active">inactive</span></td>
+        </tr>
+        <tr>
+          <td><button ng-click="updateCompany(company.id)">save</button></td>
+          <td><button ng-click="hideUpdateForm(company.id)">cancel</button></td>
+        </tr>
+      </tbody>
+    </table>
+        
+  </div>
+</form>
