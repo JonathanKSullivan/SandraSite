@@ -9,6 +9,14 @@ jsglue = JSGlue(app)
 s3 = boto3.resource('s3')
 
 
+from flask_assets import Environment, Bundle
+assets = Environment(app)
+assets.url = app.static_url_path
+scss = Bundle('styles/main.scss', filters='pyscss', output='styles/all.css')
+assets.register('scss_all', scss)
+assets.init_app(app)
+print "scss", scss
+
 from flask_sqlalchemy import SQLAlchemy
 app.config.from_object('qualitaxas.config.DevelopmentConfig')
 
@@ -20,10 +28,3 @@ with app.app_context():
 
 from qualitaxas.views import view
 from qualitaxas.rest_api import *
-
-from flask_assets import Environment, Bundle
-assets = Environment(app)
-assets.url = app.static_url_path
-scss = Bundle('styles/main.scss', filters='pyscss', output='styles/all.css')
-assets.register('scss_all', scss)
-assets.init_app(app)
