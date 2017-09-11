@@ -19,86 +19,16 @@
     {{ JSGlue.include() }}
   </head>
   <body>
-    <div class="header">
-      <div class="navbar navbar-default" role="navigation">
-        <div class="container-fluid">
-          <div class="navbar-header">
+    
+    
+    <div ui-view class="flex-container">
 
-            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#js-navbar-collapse">
-              <span class="sr-only">Toggle navigation</span>
-              <span class="icon-bar"></span>
-              <span class="icon-bar"></span>
-              <span class="icon-bar"></span>
-            </button>
-
-            <a class="navbar-brand" href="#/">Qualitaxas</a>
-          </div>
-
-          <div class="collapse navbar-collapse" id="js-navbar-collapse">
-
-            <ul class="nav navbar-nav">
-              <li>
-                <a id="meet" href="#!/meet">
-                  Meet Sandra
-                </a>
-              </li>
-              <li>
-                <a id="services" href="#!/services">
-                  Services
-                </a>
-              </li>
-              <li>
-                <a id="testimonials" href="#!/testimonials">
-                  Testimonials
-                </a>
-              </li>
-              <li>
-                <a id="contact" href="#!/contact">
-                  Contact
-                </a>
-              </li>
-            </ul>
-            <ul class="nav navbar-nav navbar-right">
-              {% if not session.login %}
-              <li>
-                <a id="login" href="#!/login">
-                  Login
-                </a>
-              </li>
-              {% endif %}
-              {% if session.login %}
-              <li>
-                <a id="logout" href="#!/logout">
-                  Login
-                </a>
-              </li>
-              {% endif %}
-              {% if session.company_admin %}
-              <li>
-                <a id="admin" href="#!/admin">
-                  Admin
-                </a>
-              </li>
-              {% endif %}
-              {% if session.admin %}
-              <li>
-                <a id="admin" href="#!/admin">
-                  Admin
-                </a>
-              </li>
-              {% endif %}
-            </ul>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <div class="container">
+    <!-- 
       <div ui-view class="row"></div>
       <br><hr>
       <a href="#!/user">User</a><br>
       <a href="#!/comany">Company</a><br>
-      <a href="#!/admin">Admin</a><br>
+      <a href="#!/admin">Admin</a><br> -->
     </div>
 
 
