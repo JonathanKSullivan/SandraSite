@@ -7,7 +7,7 @@
         <div class="row">
             <div class="contact col-xs-12">
                 <span class="email">
-                    <a href = "mailto: abc@example.com">
+                    <a href = "mailto: sandra@qualitaxas.com">
                         <button>
                             Send an Email
                         </button>
@@ -15,7 +15,7 @@
                 </span>
             </div>
             <div class="contact col-xs-12">
-                <span class="phone"><a href="tel:3177594940"> (317) 759-4940 </a></span>
+                <span class="phone"><a href="tel:4699091884">(469) 909 - 1884</a></span>
             </div>
         </div>
 
@@ -27,10 +27,208 @@
 </div>
 
 <div class="row green">
-  green
+
+  <div class="clearfix visible-md-block visible-lg-block"></div>
+
+  <div class="col-sm-4 col-xs-6">
+    <div class="panel panel-default">
+      <div class="panel-body">
+        <img src="static/images/accounting_services.png" class="img-responsive">
+      </div>
+    </div>
+    <span>Accounting Services</span>
+  </div>
+
+  <div class="col-sm-4 col-xs-6">
+    <div class="panel panel-default">
+      <div class="panel-body">
+        <img src="static/images/tax_return_preparation.png" class="img-responsive">
+      </div>
+    </div>
+    <span>Tax Return Preparation</span>
+  </div>
+
+  <div class="clearfix visible-xs-block"></div>
+
+  <div class="col-sm-4 col-xs-6">
+    <div class="panel panel-default">
+      <div class="panel-body">
+        <img src="static/images/itin_application_services.png" class="img-responsive">
+      </div>
+    </div>
+    <span>ITIN Application Services</span>
+  </div>
+
+  <div class="clearfix visible-md-block visible-lg-block"></div>
+
+  <div class="col-sm-4 col-xs-6">
+    <div class="panel panel-default">
+      <div class="panel-body">
+        <img src="static/images/irs_representation.png" class="img-responsive">
+      </div>
+    </div>
+    <span>IRS Representation</span>
+  </div>
+
+  <div class="clearfix visible-xs-block"></div>
+
+  <div class="col-sm-4 col-xs-6">
+    <div class="panel panel-default">
+      <div class="panel-body">
+        <img src="static/images/debt_and_financial_advising.png" class="img-responsive">
+      </div>
+    </div>
+    <span>Debt and Financial Advising</span>
+  </div>
+
+  <div class="col-sm-4 col-xs-6">
+    <div class="panel panel-default">
+      <div class="panel-body">
+        <img src="static/images/quickbooks_services.png" class="img-responsive">
+      </div>
+    </div>
+    <span>Quickbooks Services</span>
+  </div>
+
+  <div class="clearfix visible-xs-block visible-md-block visible-lg-block"></div>
+
+  <div class="col-sm-4 col-xs-6">
+    <div class="panel panel-default">
+      <div class="panel-body">
+        <img src="static/images/quickbooks_services.png" class="img-responsive">
+      </div>
+    </div>
+    <span>LLC Setup</span>
+  </div>
+
+  <div class="col-sm-4 col-xs-6">
+    <div class="panel panel-default">
+      <div class="panel-body">
+        <img src="static/images/notary_services.png" class="img-responsive">
+      </div>
+    </div>
+    <span>Notary Services</span>
+  </div>
+
+  <div class="clearfix visible-xs-block"></div>
+
+  <div class="col-sm-4 col-xs-6 col-xs-offset-3 col-sm-offset-0">
+    <div class="panel panel-default">
+      <div class="panel-body">
+        <img src="static/images/credit_repair.png" class="img-responsive">
+      </div>
+    </div>
+    <span>Credit Repair</span>
+  </div>
+  <div class="clearfix visible-md-block visible-lg-block"></div>
 </div>
+
+
 
 <div class="row blue">
-  b
+
+  <div class="colored-background">
+    <div class="col-xs-12">
+      <h1>About Sandra Portales</h1>
+    </div>
+    <div class="col-xs-12 col-sm-3 photo-wrapper">
+      <img class="img-responsive" src="/static/images/sandra.jpg">
+    </div>
+    <div class="col-xs-12 col-sm-9">
+       <p>
+        Sandra Portales has been serving individuals and businesses offering accounting solutions for over 10 years.
+      </p>
+      <p>
+        She has a Bachelor’s degree in Accounting from Texas A &amp; M International University and a Masters degree in Accounting from the University of Dallas. Additionally Sandra serves as a President on the Board of Directors of Desarollo Integral Latino Americano, an organization that assists with the job training and education for disadvantaged individuals.
+      </p>
+      <p>
+        Being raised in Mexico, she is fluent in Spanish.
+      </p>
+      <p>
+        Sandra greatly enjoys working with those who have businesses, helping them achieve their business goals. She is passionate about developing and creating unique ideas for individuals and businesses. Her specialties are bookkeeping and tax record solutions. She also assists business owners with organizational structuring and business networking referrals.
+      </p>
+      <p>
+        She loves what she does and enjoys working with every person she meets.
+      </p>
+
+      <p id="caption">
+        <b>Sandra’s desire is to see your business and individual goals become a reality!</b>
+      </p>
+    </div>
+  </div>
+  <div class="col-xs-12 photo-wrapper">
+    <div id="map"></div>
+    <script>
+      function initMap() {
+        // Create a map object and specify the DOM element for display.
+        var map = new google.maps.Map(document.getElementById('map'), {
+          center: {
+            lat: 32.747341, 
+            lng: -97.072570
+          },
+          zoom: 15,
+          scrollwheel: false,
+          zoomControl: false,
+          mapTypeControl: false,
+          scaleControl: false,
+          streetViewControl: false,
+          rotateControl: false,
+          fullscreenControl: false
+        });
+        var marker = new google.maps.Marker({
+          position: {
+            lat: 32.747341, 
+            lng: -97.072570
+          },
+          map: map,
+          title: 'Qualitaxas'
+        });
+
+        var infowindow = new google.maps.InfoWindow({
+          content: "Qualitaxas"
+        });
+
+
+        marker.addListener('click', function() {
+          infowindow.open(map, marker);
+        });
+      }
+
+    </script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAJYMRa5qjGuLSJo4ekv-eSUUmb2XeJMaI&callback=initMap"
+    async defer></script>
+  </div>
+  <div class="clearfix visible-xs-block visible-md-block visible-lg-block"></div>
 </div>
 
+<div class="row green">
+  <h1>Clients</h1>
+  <ul class="list-group">
+    <li class="list-group-item">USA PERFORMANCE</li>
+    <li class="list-group-item">ONE MATTRESS</li>
+    <li class="list-group-item">LUZ TRUCKING</li>
+    <li class="list-group-item">TASTY PAELLA</li>
+    <li class="list-group-item">INTIRE HEALTH</li>
+    <li class="list-group-item">INTIRE TOX</li>
+    <li class="list-group-item">LONE STAR</li>
+    <li class="list-group-item">R &amp; S STAFFING</li>
+    <li class="list-group-item">HERNANDEZ EXPRESS SERVICES</li>
+    <li class="list-group-item">GEN SAM LLC</li>
+    <li class="list-group-item">SCMG CORP.</li>
+    <li class="list-group-item">C &amp; E LOPEZ CORP</li>
+    <li class="list-group-item">MARBELLA MGN LLC</li>
+    <li class="list-group-item">FBGS CORP</li>
+    <li class="list-group-item">GUZMAN &amp; CANALES CORP.</li>
+    <li class="list-group-item">VSCL CORP.</li>
+    <li class="list-group-item">REAL ESTATE</li>
+    <li class="list-group-item">LIC CANALES</li>
+    <li class="list-group-item">CANALES SVC MANAGEMENT</li>
+  </ul>
+  <div class="footer">
+      <div class="container">
+        <p>
+          <a href="http://jonathanksullivan.github.io">Built by by Jonathan K Sullivan</a>
+        </p>
+      </div>
+    </div>
+</div>

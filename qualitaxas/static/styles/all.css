@@ -16,14 +16,48 @@
         font-size: 30px; }
         .red span {
           color: #FFFFFF; }
+          .red a {
+            color: #79c23f; }
+            .red button {
+              border-radius: 10px;
+              background: #79c23f;
+              color: #EEFFEE;
+              padding: 10px;
+              border: 0; }
 
 .green {
   background: #EEFFEE;
-  height: 400px; }
+  text-align: center; }
+  .green .panel {
+    border-radius: 15px;
+    margin: 10px;
+    background: #79c23f; }
+    .green span {
+      color: #002200;
+      font-size: 30px; }
 
-  .blue {
-    background: url("/static/images/woman_w_coffee.jpg");
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
-    height: 400px; }
+.blue {
+  background: url("/static/images/qualitaxas-bottom-image.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center; }
+  .blue .photo-wrapper {
+    padding: 0;
+    margin-bottom: 30px; }
+    .blue #caption {
+      text-align: center; }
+      .blue .colored-background {
+        background: rgba(121, 194, 63, 0.5);
+        text-align: center;
+        font-size: 16px;
+        color: #EEFFEE;
+        border-radius: 15px; }
+        .blue .colored-background div {
+          margin-top: 50px; }
+          .blue .colored-background h1 {
+            margin: 0; }
+  .blue #map {
+    height: 300px; }
+
+a {
+  color: #79c23f; }
